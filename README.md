@@ -1,5 +1,14 @@
 # Packer Example - CentOS 6 minimal Vagrant Box using Ansible provisioner
 
+## source
+  - https://github.com/geerlingguy/packer-centos-6.git
+
+## updates by mike
+
+    ansible galaxy install -p ./ansible/galaxy-roles -r requirements.txt
+    packer build --only=virtualbox-iso <(cat centos6.yml|yamltojson)
+    packer build --only=vmware-iso <(cat centos6.yml|yamltojson)
+
 **Current CentOS Version Used**: 6.7
 
 This example build configuration installs and configures CentOS 6 x86_64 minimal using Ansible, and then generates two Vagrant box files, for:
