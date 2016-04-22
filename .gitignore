@@ -2,4 +2,4 @@
 packer_cache/*
 *.box
 iso/*
-output-virtualbox-iso/*
+output-virtualbox-iso/*ansible/galaxy-roles/
